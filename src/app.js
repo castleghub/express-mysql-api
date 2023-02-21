@@ -10,8 +10,8 @@ const app = express()
 app.use(morgan('dev'))
 
 app.use(express.json())
-app.use('/API',indexRoutes)
-app.use('/API',employeesRoutes)
+app.use(indexRoutes)
+app.use('/api',employeesRoutes)
 
 //Para  otras rutas 
 app.use((req,res,next)=>{
